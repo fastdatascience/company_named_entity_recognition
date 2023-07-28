@@ -1,27 +1,27 @@
-# Drug named entity recognition Python library
+# Company named entity recognition Python library
 
 <!-- badges: start -->
 ![my badge](https://badgen.net/badge/Status/In%20Development/orange)
 
-[![PyPI package](https://img.shields.io/badge/pip%20install-drug_named_entity_recognition-brightgreen)](https://pypi.org/project/drug-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/drug-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/drug_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/drug_named_entity_recognition)](https://github.com/fastdatascience/drug_named_entity_recognition/blob/main/LICENSE)
+[![PyPI package](https://img.shields.io/badge/pip%20install-company_named_entity_recognition-brightgreen)](https://pypi.org/project/company-named-entity-recognition/) [![version number](https://img.shields.io/pypi/v/company-named-entity-recognition?color=green&label=version)](https://github.com/fastdatascience/company_named_entity_recognition/releases) [![License](https://img.shields.io/github/license/fastdatascience/company_named_entity_recognition)](https://github.com/fastdatascience/company_named_entity_recognition/blob/main/LICENSE)
 
 <!-- badges: end -->
 
-# Drug named entity recognition
+# Company named entity recognition
 
 Developed by Fast Data Science, https://fastdatascience.com
 
-Source code at https://github.com/fastdatascience/drug_named_entity_recognition
+Source code at https://github.com/fastdatascience/company_named_entity_recognition
 
-Tutorial at https://fastdatascience.com/drug-named-entity-recognition-python-library/
+Tutorial at https://fastdatascience.com/company-named-entity-recognition-python-library/
 
-This is a lightweight Python library for finding drug names in a string, otherwise known as named entity recognition (NER) and named entity linking.
+This is a lightweight Python library for finding company names in a string, otherwise known as named entity recognition (NER) and named entity linking.
 
-Please note this library finds only high confidence drugs.
+Please note this library finds only high confidence companies.
 
-It also only finds the English names of these drugs. Names in other languages are not supported.
+It also only finds the English names of these companies. Names in other languages are not supported.
 
-It also doesn't find short code names of drugs, such as abbreviations commonly used in medicine, such as "Ceph" for "Cephradin" - as these are highly ambiguous.
+It also doesn't find short code names of companies, such as abbreviations commonly used in medicine, such as "Ceph" for "Cephradin" - as these are highly ambiguous.
 
 
 # Interested in other kinds of named entity recognition (NER)? Finances, company names, countries, locations, proteins, genes, molecules?
@@ -42,12 +42,12 @@ Python 3.9 and above
 
 You can contact Thomas Wood or Fast Data Science team at https://fastdatascience.com/.
 
-# Installing drug named entity recognition Python package
+# Installing company named entity recognition Python package
 
-You can install from [PyPI](https://pypi.org/project/drug-named-entity-recognition).
+You can install from [PyPI](https://pypi.org/project/company-named-entity-recognition).
 
 ```
-pip install drug-named-entity-recognition
+pip install company-named-entity-recognition
 ```
 
 
@@ -55,70 +55,70 @@ pip install drug-named-entity-recognition
 
 You must first tokenise your input text using a tokeniser of your choice (NLTK, spaCy, etc).
 
-You pass a list of strings to the `find_drugs` function.
+You pass a list of strings to the `find_companies` function.
 
 Example 1
 
 ```
-from drug_named_entity_recognition import find_drugs
+from company_named_entity_recognition import find_companies
 
-find_drugs("i bought some Prednisone".split(" "))
+find_companies("i bought some Prednisone".split(" "))
 ```
 
 outputs a list of tuples.
 
 ```
-[({'name': 'Prednisone', 'synonyms': {'Sone', 'Sterapred', 'Deltasone', 'Panafcort', 'Prednidib', 'Cortan', 'Rectodelt', 'Prednisone', 'Cutason', 'Meticorten', 'Panasol', 'Enkortolon', 'Ultracorten', 'Decortin', 'Orasone', 'Winpred', 'Dehydrocortisone', 'Dacortin', 'Cortancyl', 'Encorton', 'Encortone', 'Decortisyl', 'Kortancyl', 'Pronisone', 'Prednisona', 'Predniment', 'Prednisonum', 'Rayos'}, 'medline_plus_id': 'a601102', 'mesh_id': 'D018931', 'drugbank_id': 'DB00635'}, 3, 3)]
+[({'name': 'Prednisone', 'synonyms': {'Sone', 'Sterapred', 'Deltasone', 'Panafcort', 'Prednidib', 'Cortan', 'Rectodelt', 'Prednisone', 'Cutason', 'Meticorten', 'Panasol', 'Enkortolon', 'Ultracorten', 'Decortin', 'Orasone', 'Winpred', 'Dehydrocortisone', 'Dacortin', 'Cortancyl', 'Encorton', 'Encortone', 'Decortisyl', 'Kortancyl', 'Pronisone', 'Prednisona', 'Predniment', 'Prednisonum', 'Rayos'}, 'medline_plus_id': 'a601102', 'mesh_id': 'D018931', 'companybank_id': 'DB00635'}, 3, 3)]
 ```
 
 You can ignore case with:
 
 ```
-find_drugs("i bought some prednisone".split(" "), is_ignore_case=True)
+find_companies("i bought some prednisone".split(" "), is_ignore_case=True)
 ```
 
 # Compatibility with other natural language processing libraries
 
-The Drug Named Entity Recognition library is independent of other NLP tools and has no dependencies. You don't need any advanced system requirements and the tool is lightweight. However, it combines well with other libraries  such as [spaCy](https://spacy.io) or the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html).
+The Company Named Entity Recognition library is independent of other NLP tools and has no dependencies. You don't need any advanced system requirements and the tool is lightweight. However, it combines well with other libraries  such as [spaCy](https://spacy.io) or the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html).
 
-## Using Drug Named Entity Recognition together with spaCy
+## Using Company Named Entity Recognition together with spaCy
 
 Here is an example call to the tool with a [spaCy](https://spacy.io) Doc object:
 
 ```
-from drug_named_entity_recognition import find_drugs
+from company_named_entity_recognition import find_companies
 import spacy
 nlp = spacy.blank("en")
 doc = nlp("i routinely rx rimonabant and pts prefer it")
-find_drugs([t.text for t in doc], is_ignore_case=True)
+find_companies([t.text for t in doc], is_ignore_case=True)
 ```
 
 outputs:
 
 ```
-[({'name': 'Rimonabant', 'synonyms': {'Acomplia', 'Rimonabant', 'Zimulti'}, 'mesh_id': 'D063387', 'drugbank_id': 'DB06155'}, 3, 3)]
+[({'name': 'Rimonabant', 'synonyms': {'Acomplia', 'Rimonabant', 'Zimulti'}, 'mesh_id': 'D063387', 'companybank_id': 'DB06155'}, 3, 3)]
 ```
 
-## Using Drug Named Entity Recognition together with NLTK
+## Using Company Named Entity Recognition together with NLTK
 
 You can also use the tool together with the [Natural Language Toolkit (NLTK)](https://www.nltk.org/api/nltk.tokenize.html):
 
 ```
-from drug_named_entity_recognition import find_drugs
+from company_named_entity_recognition import find_companies
 from nltk.tokenize import wordpunct_tokenize
 tokens = wordpunct_tokenize("i routinely rx rimonabant and pts prefer it")
-find_drugs(tokens, is_ignore_case=True)
+find_companies(tokens, is_ignore_case=True)
 ```
 
 # Data sources
 
-The main data source is from Drugbank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
+The main data source is from Companybank, augmented by datasets from the NHS, MeSH, Medline Plus and Wikipedia.
 
-## Update the Drugbank dictionary
+## Update the Companybank dictionary
 
-If you want to update the dictionary, you can use the data dump from Drugbank and replace the file `drugbank vocabulary.csv`:
+If you want to update the dictionary, you can use the data dump from Companybank and replace the file `companybank vocabulary.csv`:
 
-* Download the open data dump from https://go.drugbank.com/releases/latest#open-data
+* Download the open data dump from https://go.companybank.com/releases/latest#open-data
 
 ## Update the Wikipedia dictionary
 
@@ -126,14 +126,14 @@ If you want to update the Wikipedia dictionary, download the dump from:
 
 * https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia
 
-and run `extract_drug_names_and_synonyms_from_wikipedia_dump.py`
+and run `extract_company_names_and_synonyms_from_wikipedia_dump.py`
 
 ## Update the MeSH dictionary
 
 If you want to update the dictionary, run
 
 ```
-python download_mesh_dump_and_extract_drug_names_and_synonyms.py
+python download_mesh_dump_and_extract_company_names_and_synonyms.py
 ```
 
 This will download the latest XML file from NIH.
@@ -142,19 +142,19 @@ If the link doesn't work, download the open data dump manually from https://www.
 
 ## License information for external data sources
 
-* Data from Drugbank is licensed under [CC0](https://go.drugbank.com/releases/latest#open-data).
+* Data from Companybank is licensed under [CC0](https://go.companybank.com/releases/latest#open-data).
 
 ```
-To the extent possible under law, the person who associated CC0 with the DrugBank Open Data has waived all copyright and related or neighboring rights to the DrugBank Open Data. This work is published from: Canada.
+To the extent possible under law, the person who associated CC0 with the CompanyBank Open Data has waived all copyright and related or neighboring rights to the CompanyBank Open Data. This work is published from: Canada.
 ```
 
 * Text from Wikipedia data dump is licensed under [GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.html) and [Creative Commons Attribution-Share-Alike 3.0 License](https://creativecommons.org/licenses/by-sa/3.0/). [More information](https://dumps.wikimedia.org/legal.html).
 
-## Contributing to the Drug Named Entity Recognition library
+## Contributing to the Company Named Entity Recognition library
 
-If you'd like to contribute to this project, you can contact us at https://fastdatascience.com/ or make a pull request on our [Github repository](https://github.com/fastdatascience/drug_named_entity_recognition). You can also [raise an issue](https://github.com/fastdatascience/drug_named_entity_recognition/issues). 
+If you'd like to contribute to this project, you can contact us at https://fastdatascience.com/ or make a pull request on our [Github repository](https://github.com/fastdatascience/company_named_entity_recognition). You can also [raise an issue](https://github.com/fastdatascience/company_named_entity_recognition/issues). 
 
-## Developing the Drug Named Entity Recognition library
+## Developing the Company Named Entity Recognition library
 
 ### Automated tests
 
@@ -204,24 +204,24 @@ python setup.py sdist
 twine upload dist/*
 ```
 
-## Who worked on the Drug Named Entity Recognition library?
+## Who worked on the Company Named Entity Recognition library?
 
 The tool was developed:
 
 * Thomas Wood ([Fast Data Science](https://fastdatascience.com))
 
-## License of Drug Named Entity Recognition library
+## License of Company Named Entity Recognition library
 
 MIT License. Copyright (c) 2023 [Fast Data Science](https://fastdatascience.com)
 
-## Citing the Drug Named Entity Recognition library
+## Citing the Company Named Entity Recognition library
 
-Wood, T.A., Drug Named Entity Recognition [Computer software], Version 1.0.1, accessed at [https://fastdatascience.com/drug-named-entity-recognition-python-library](https://fastdatascience.com/drug-named-entity-recognition-python-library), Fast Data Science Ltd (2023)
+Wood, T.A., Company Named Entity Recognition [Computer software], Version 1.0.1, accessed at [https://fastdatascience.com/company-named-entity-recognition-python-library](https://fastdatascience.com/company-named-entity-recognition-python-library), Fast Data Science Ltd (2023)
 
 ```
-@unpublished{drugnamedentityrecognition,
+@unpublished{companynamedentityrecognition,
     AUTHOR = {Wood, T.A.},
-    TITLE  = {Drug Named Entity Recognition (Computer software), Version 1.0.1},
+    TITLE  = {Company Named Entity Recognition (Computer software), Version 1.0.1},
     YEAR   = {2023},
     Note   = {To appear},
 }

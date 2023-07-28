@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # Get trade names from Wikipedia dump
-# If you want to update the Wikipedia drugs dictionary, you need to download the dump of English Wikipedia from:
+# If you want to update the Wikipedia companies dictionary, you need to download the dump of English Wikipedia from:
 # https://meta.wikimedia.org/wiki/Data_dump_torrents#English_Wikipedia
 # 
 # The dump is 20 GB compressed so you need to read it as a Bzip file.
@@ -42,7 +42,7 @@ for line in source_file:
         print ("num gigabytes seen", bytes_read / 1000000000)
 
 
-with open("drugs_dictionary_wikipedia.csv", "w", encoding="utf-8") as fo:
+with open("companies_dictionary_wikipedia.csv", "w", encoding="utf-8") as fo:
     writer = csv.writer(fo)
     writer.writerow(["Wikipedia link", "Common name", "Synonyms"])
     

@@ -1639,7 +1639,7 @@ DB01717,EXPT00535,Bis(Adenosine)-5'-Pentaphosphate,,,"",OIMACDRJUANHTJ-XPWFQUROS
 DB01718,DB13159 | EXPT00048,Cetrimonium,6899-10-1,Z7FF1XKL7A,"Cetrimonium cation | Cetrimonium ion | Cetyl-Trimethyl-Ammonium | Cetyltrimethylammonium | Cetyltrimethylammonium cation | Cetyltrimethylammonium ion | Hexadecyltrimethylammonium | Hexadecyltrimethylammonium cation | Hexadecyltrimethylammonium ion | N,N,N-Trimethyl-1-hexadecanaminium | Trimethylhexadecylammonium",RLGQACBPNDBWTB-UHFFFAOYSA-N
 DB01719,EXPT03067,Thio-Maltopentaose,,,"",HQMKYAZGNUQLJB-DCFYERRSSA-N
 DB01720,EXPT02579,(2Z)-2-(Benzoylamino)-3-[4-(2-bromophenoxy)phenyl]acrylic acid,639517-90-1,,(2Z)-2-(benzoylamino)-3-[4-(2-bromophenoxy)phenyl]-2-propenoic acid,WLPJLQNKCJWAFL-RGEXLXHISA-N
-DB01721,EXPT03261,"N-[2-hydroxy-1-indanyl]-5-[(2-tertiarybutylaminocarbonyl)-4(benzo[1,3]dioxol-5-ylmethyl)-piperazino]-4-hydroxy-2-(1-phenylethyl)-pentanamide",,,Analogue of indinavir drug,MJIRDPUZGGHJMX-XPYHLXFLSA-N
+DB01721,EXPT03261,"N-[2-hydroxy-1-indanyl]-5-[(2-tertiarybutylaminocarbonyl)-4(benzo[1,3]dioxol-5-ylmethyl)-piperazino]-4-hydroxy-2-(1-phenylethyl)-pentanamide",,,Analogue of indinavir company,MJIRDPUZGGHJMX-XPYHLXFLSA-N
 DB01723,EXPT00532,"{3-[3-(3,4-Dimethoxy-Phenyl)-1-(1-{1-[2-(3,4,5-Trimethoxy-Phenyl)-Butyryl]-Piperidin-2yl}-Vinyloxy)-Propyl]-Phenoxy}-Acetic Acid",,,"",XCCRAOPQCACRFC-OIFRRMEBSA-N
 DB01724,EXPT03054,L-Threoninol,3228-51-1,A16V466XOD,"",MUVQIIBPDFTEKM-QWWZWVQMSA-N
 DB01725,DB06854 | EXPT00301,"2-{2-hydroxy-[1,1'-biphenyl]-3-yl}-1H-1,3-benzodiazole-5-carboximidamide",,,"2-(2-HYDROXY-BIPHENYL)-1H-BENZOIMIDAZOLE-5-CARBOXAMIDINE | 3-{5-[AMINO(IMINIO)METHYL]-1H-BENZIMIDAZOL-2-YL}-1,1'-BIPHENYL-2-OLATE",LMGQGPVCSYOMNS-UHFFFAOYSA-N
@@ -12747,9 +12747,9 @@ DB14803,"",AMY-101,1427001-89-5,4Z4DFR9BX7,"",MUSGYEMSJUFFHT-MHLWMKJLSA-N
 DB14804,"",Iodine I-125,14158-31-7,GVO776611R,125-IODINE,ZCYVEMRRCGMTRW-YPZZEJLDSA-N
 DB14805,DB16696,Piflufolastat F 18,1207181-29-0,3934EF02T7,(18F)DCFPyL | [F-18]-DCFPyL | 18F-DCFPyL | DCFPyL F-18 | Piflufolastat F 18 | Piflufolastat F-18 | PyL,OLWVRJUNLXQDSP-MVBOSPHXSA-N
 DB14806,"",Avexitide,133514-43-9,5313W10MYT,Avexitide | EXENDIN (9-39),WSEVKKHALHSUMB-RYVRVIGHSA-N
-DB14807,"",Demplatin pegraglumer,1009838-50-9,9DMG482P0R,"A micelle drug formulation composed of cisplatin and mPEG-poly(l-Glu) diblock copolymer with 1,3-propanediyl linkagecisplatin is incorporated in polymeric micelles via polymer-metal complex formation with cis-geometry of PT | Demplatin pegraglumer | NC-6004 nanoplatin",
+DB14807,"",Demplatin pegraglumer,1009838-50-9,9DMG482P0R,"A micelle company formulation composed of cisplatin and mPEG-poly(l-Glu) diblock copolymer with 1,3-propanediyl linkagecisplatin is incorporated in polymeric micelles via polymer-metal complex formation with cis-geometry of PT | Demplatin pegraglumer | NC-6004 nanoplatin",
 DB14808,"",Lumicitabine,1445385-02-3,BNW5PQ52G1,ALS-008176 | Lumicitabine,MJVKYGMNSQJLIN-KYZVSKTDSA-N
-DB14809,"",Anetumab ravtansine,1375258-01-7,M170940PMI,Anetumab ravtansine | Anti-mesothelin antibody-drug conjugate BAY 94-9343 | BAY 94-9343,
+DB14809,"",Anetumab ravtansine,1375258-01-7,M170940PMI,Anetumab ravtansine | Anti-mesothelin antibody-company conjugate BAY 94-9343 | BAY 94-9343,
 DB14810,"",AZD-1656,919783-22-5,660M185X4D,"",FJEJHJINOKKDCW-INIZCTEOSA-N
 DB14811,"",Isatuximab,1461640-62-9,R30772KCU0,Isatuximab | isatuximab-irfc,
 DB14812,"",Procalcitonin,56645-65-9,SV1QL0ZSJ9,"",
@@ -13997,7 +13997,7 @@ DB16086,"",Aldafermin,1616639-03-2,IK9NYN31ZM,"(phe5>met,ser6>arg,ala8>ser,gly9>
 DB16087,"",Alflutinib,1869057-83-9,A49A7A5YN4,"",GHKOONMJXNWOIW-UHFFFAOYSA-N
 DB16088,"",Amtolmetin guacil,87344-05-6,3RS348SV6U,Amtolmetin | Tolmetin glycine amide,IYNXNYQOVKPFMM-UHFFFAOYSA-N
 DB16089,"",Anivamersen,959716-29-1,4OXU6KPQ3R,"Anivamersen | Rna, (cm-gm-cm-gm-gm-um-am-um-am-gm-um-cm-cm-am-cm)",
-DB16090,"",CX-2009,2145115-85-9,RD2I59M9FC,Anti-cd166 probody-drug conjugate cx-2009 | Praluzatamab ravtansine,
+DB16090,"",CX-2009,2145115-85-9,RD2I59M9FC,Anti-cd166 probody-company conjugate cx-2009 | Praluzatamab ravtansine,
 DB16091,"",EMB-01,,G86X5QQ7M5,Anti-egfr/anti-c-met bispecific antibody emb-01 | Anti-egfr/c-met bispecific antibody emb-01,
 DB16092,"",RO6874281,1776942-10-9,FL08SGO9XA,Anti-fap/interleukin-2 fusion protein ro6874281 | Simlukafusp alfa,
 DB16093,"",PEGylated Recombinant Factor VIII,1417412-83-9,,"Adynovate | Adynovi | Antihemophilic factor (recombinant), pegylated (20 kda) | Antihemophilic factor (recombinant), pegylated (mw 20000) | Antihemophilic factor, pegylated (mw 20000) human sequence recombinant | PEGylated Recombinant Factor VIII | Pegylated rfviii",
@@ -14249,7 +14249,7 @@ DB16338,"",Taniborbactam,1613267-49-4,8IGQ156Z07,Taniborbactam,PFZUWUXKQPRWAL-NO
 DB16339,"",ABX-196,1161877-58-2,SOI87F7GN2,"",VITDDUXZOHEQMU-BYSUZVQFSA-N
 DB16340,"",Tetrafluoroborate,14874-70-5,4YCF3545OY,"Borate(1-), tetrafluoro- | Fluoroborate | Tetrafluoroborate | Tetrafluoroborate (bf41-) | Tetrafluoroborate anion | Tetrafluoroborate ion | Tetrafluoroborate(1-)",ODGCEQLVLXJUCC-UHFFFAOYSA-N
 DB16341,"",Tilsotolimod,1948266-37-2,G287IC9MH3,Tilsotolimod,
-DB16342,"",Trastuzumab duocarmazine,1642152-40-6,XCR2BZ80N7,"Immunoglobulin g1-kappa, anti-(homo sapiens erbb2 (epidermal growth factor receptor 2, receptor tyrosineprotein kinase erbb-2, egfr2, her2, her-2, p185cerbb2, neu, cd340)), humanized monoclonal antibody conjugated to the pro-drug seco-duocarmycinhydroxyb | Trastuzumab duocarmazine",
+DB16342,"",Trastuzumab duocarmazine,1642152-40-6,XCR2BZ80N7,"Immunoglobulin g1-kappa, anti-(homo sapiens erbb2 (epidermal growth factor receptor 2, receptor tyrosineprotein kinase erbb-2, egfr2, her2, her-2, p185cerbb2, neu, cd340)), humanized monoclonal antibody conjugated to the pro-company seco-duocarmycinhydroxyb | Trastuzumab duocarmazine",
 DB16343,"",Tropifexor,1383816-29-2,NMZ08KM76Z,Tropifexor,VYLOOGHLKSNNEK-PIIMJCKOSA-N
 DB16344,"",Tulrampator,1038984-31-4,7633T9D4LN,Tulrampator,JHCFQXNWYDLBOG-UHFFFAOYSA-N
 DB16345,"",Uracil C-13,35803-45-3,OZF8J4VAIK,"13C-uracil | Uracil (2-13c) | Uracil 2c-13 | Uracil C-13, 2- | Uracil-(2-13c)",ISAKRJDGNUQOIC-AZXPZELESA-N
@@ -15059,7 +15059,7 @@ DB17208,"",Disitamab vedotin,2136633-23-1,RB3U3A1S27,RC48,
 DB17209,"",Urabrelimab,2249722-58-3,W6284A5K8N,"Immunoglobulin igg4, anti-(human cd47) (human monoclonal srf231 .gamma.4-chain), disulfide with human monoclonal srf231 .kappa.-chain, dimer",
 DB17210,"",KAb201,,,Anti-CEA sheep-human chimeric monoclonal antibody labeled w/iodine-131 (KAb201) | I131-KAb201,
 DB17211,"",Etevritamab,2329692-74-0,WR4J8FV2SM,Anti-egfrviii/cd3 bite antibody amg 596,
-DB17212,"",DP-303c,,,ADC DP303c | antibody-drug conjugate DP303c,
+DB17212,"",DP-303c,,,ADC DP303c | antibody-company conjugate DP303c,
 DB17213,"",hu3S193,,,Anti-Lewis Y monoclonal antibody 3S193 | mAb Hu3S193 - Anti-LeY | RebmAb-100,
 DB17214,"",Murlentamab,2058047-65-5,ZN0DUZ3M4L,Murlentamab,
 DB17215,"",SBT-100,,,"",
@@ -15071,7 +15071,7 @@ DB17220,"",ALT-P7,,,ADC ALT-P7 | HM2-MMAE | HM2/MMAE ADC ALT-P7,
 DB17221,"",Pritumumab,499212-74-7,Z6Q90D1G53,Pritumumab,
 DB17222,"",Tamrintamab pamozirine,2148334-68-1,GM0RU5SU0E,"",
 DB17223,"",Paclitaxel ceribate,186040-50-6,B3C86E80A0,Paclitaxel ceribate | Protaxel,HSUDWURBWSUCOB-JPHWUADUSA-N
-DB17224,"",STRO-001,,0D8BWL78LD,"Anti-CD74 antibody-drug conjugate STRO-001 | antibody-drug conjugate comprised of a human aglycosylated anti-CD74 IgG1 antibody (SP7219) and two non-cleavable maytansinoid linker warheads | STRO-001, a site-specific anti-CD74 antibody-drug conjugate",
+DB17224,"",STRO-001,,0D8BWL78LD,"Anti-CD74 antibody-company conjugate STRO-001 | antibody-company conjugate comprised of a human aglycosylated anti-CD74 IgG1 antibody (SP7219) and two non-cleavable maytansinoid linker warheads | STRO-001, a site-specific anti-CD74 antibody-company conjugate",
 DB17225,"",XMMME-001-DTPA 111 Indium,,,Antimelanoma antibody XMMME-001-DTPA 111 Indium,
 DB17226,"",Aspacytarabine,2098942-53-9,JL7V54Z2BR,"Astarabine | L-asparagine, n-(1-.beta.-d-arabinofuranosyl-1,2-dihydro-2-oxo-4-pyrimidinyl)- | N4-(1-.beta.-d-arabinofuranosyl-2-oxo-1,2-dihydropyrimidin-4-yl)-l-asparagine",PVPJTBAEAQVTPN-HRAQMCAYSA-N
 DB17227,"",TVI-Brain-1,,,Attenuated autologous cancer cells and granulocyte macrophage colony stimulating factor in combination with activated autologous blood derived T-cells,

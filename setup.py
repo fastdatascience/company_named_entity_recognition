@@ -4,18 +4,18 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name = 'drug-named-entity-recognition',
+    name = 'company-named-entity-recognition',
     author="Thomas Wood",
     author_email="thomas@fastdatascience.com",
-    description='Drug Named Entity Recognition library to find and resolve drug names in a string (drug named entity linking)',
-    keywords= ['drug', 'bio', 'biomedical', 'medical', 'pharma', 'pharmaceutical', 'ner', 'nlp', 'named entity recognition', 'natural language processing', 'named entity linking'],
+    description='Company Named Entity Recognition library to find and resolve company names in a string (company named entity linking)',
+    keywords= ['company', 'bio', 'biomedical', 'medical', 'pharma', 'pharmaceutical', 'ner', 'nlp', 'named entity recognition', 'natural language processing', 'named entity linking'],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://fastdatascience.com/drug-named-entity-recognition-python-library",
+    url="https://fastdatascience.com/company-named-entity-recognition-python-library",
     project_urls={
-        "Documentation": "https://fastdatascience.com/drug-named-entity-recognition-python-library",
-        "Bug Reports": "https://github.com/fastdatascience/drug_named_entity_recognition/issues",
-        "Source Code": "https://github.com/fastdatascience/drug_named_entity_recognition",
+        "Documentation": "https://fastdatascience.com/company-named-entity-recognition-python-library",
+        "Bug Reports": "https://github.com/fastdatascience/company_named_entity_recognition/issues",
+        "Source Code": "https://github.com/fastdatascience/company_named_entity_recognition",
         # 'Funding': '',
         # 'Say Thanks!': '',
     },

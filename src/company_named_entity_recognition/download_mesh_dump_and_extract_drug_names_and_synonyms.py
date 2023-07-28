@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import operator
 import csv
-import drugs_finder
+import companies_finder
 import xml.sax
 import subprocess
 import datetime
@@ -58,7 +58,7 @@ class CustomContentHandler(xml.sax.ContentHandler):
             1/0
         self.path = self.path[:-1]
         if tagName == "DescriptorRecord":
-            #if True or self.title.upper() in drugs_finder.drug_variant_to_canonical:
+            #if True or self.title.upper() in companies_finder.company_variant_to_canonical:
             is_include = False
             for t in self.tree_numbers:
                 if t.startswith("D"):
@@ -69,7 +69,7 @@ class CustomContentHandler(xml.sax.ContentHandler):
                 if len(t.split('.')) < 4:
                     is_include = False
                     break
-            if not self.title.upper() in drugs_finder.drug_variant_to_canonical:
+            if not self.title.upper() in companies_finder.company_variant_to_canonical:
                 is_include = False
             if is_include:
                 self.writer.writerow([self.id, self.title, "|".join(self.terms)])
@@ -104,7 +104,7 @@ class CustomContentHandler(xml.sax.ContentHandler):
         print('Finishing up!')
 
 
-with open("drugs_dictionary_mesh.csv", "w", encoding="utf-8") as fo:
+with open("companies_dictionary_mesh.csv", "w", encoding="utf-8") as fo:
     writer = csv.writer(fo)
         
     handler = CustomContentHandler(writer)

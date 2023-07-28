@@ -3,8 +3,8 @@ import re
 import pathlib
 this_path = pathlib.Path(__file__).parent.resolve()
 
-drug_variant_to_canonical = {}
-drug_canonical_to_data = {}
+company_variant_to_canonical = {}
+company_canonical_to_data = {}
 
 exclusions = {'ACACIA',
               'ACETAMIDE',
@@ -582,41 +582,41 @@ variant_regex = re.compile(r'^[A-Za-z][a-z]+(?:[ -][A-Z])?$')
 
 
 def add_variant(canonical_name, variant):
-    if variant not in drug_variant_to_canonical:
-        drug_variant_to_canonical[variant] = set()
-    drug_variant_to_canonical[variant].add(canonical_name)
+    if variant not in company_variant_to_canonical:
+        company_variant_to_canonical[variant] = set()
+    company_variant_to_canonical[variant].add(canonical_name)
 
 
-def add_drug(id, synonyms):
+def add_company(id, synonyms):
     synonyms = [s.strip() for s in synonyms]
     if re.sub("[- ].+", "", synonyms[0].upper()) in exclusions:
         return
     if not variant_regex.match(synonyms[0]):
         return
-    if synonyms[0] not in drug_canonical_to_data:
-        drug_canonical_to_data[synonyms[0]] = {"name": synonyms[0], "synonyms": set()}
+    if synonyms[0] not in company_canonical_to_data:
+        company_canonical_to_data[synonyms[0]] = {"name": synonyms[0], "synonyms": set()}
     if id.startswith("a"):
-        drug_canonical_to_data[synonyms[0]]["medline_plus_id"] = id
+        company_canonical_to_data[synonyms[0]]["medline_plus_id"] = id
     elif id.startswith("https://www.nhs.uk"):
-        drug_canonical_to_data[synonyms[0]]["nhs_url"] = id
+        company_canonical_to_data[synonyms[0]]["nhs_url"] = id
     elif id.startswith("https://en.wikipedia"):
-        drug_canonical_to_data[synonyms[0]]["wikipedia_url"] = id
+        company_canonical_to_data[synonyms[0]]["wikipedia_url"] = id
     elif id.startswith("DB"):
-        drug_canonical_to_data[synonyms[0]]["drugbank_id"] = id
+        company_canonical_to_data[synonyms[0]]["companybank_id"] = id
     else:
-        drug_canonical_to_data[synonyms[0]]["mesh_id"] = id
+        company_canonical_to_data[synonyms[0]]["mesh_id"] = id
     for variant in synonyms:
         if re.sub(" .+", "", variant.upper()) in exclusions:
             return
         if variant_regex.match(variant):
-            drug_canonical_to_data[synonyms[0]]["synonyms"].add(variant)
+            company_canonical_to_data[synonyms[0]]["synonyms"].add(variant)
             add_variant(synonyms[0], variant)
             add_variant(synonyms[0], variant.upper())
             if variant.lower() in words_to_allow_lower_case:
                 add_variant(synonyms[0], variant.lower())
 
 
-with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding="utf-8") as csvfile:
+with open(this_path.joinpath("companies_dictionary_medlineplus.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
     for row in spamreader:
@@ -631,9 +631,9 @@ with open(this_path.joinpath("drugs_dictionary_medlineplus.csv"), 'r', encoding=
             " (Injection|Oral Inhalation|Transdermal|Ophthalmic|Topical|Vaginal Cream|Nasal Spray|Transdermal Patch|Rectal)",
             "", name)
 
-        add_drug(id, [name] + synonyms)
+        add_company(id, [name] + synonyms)
 
-with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8") as csvfile:
+with open(this_path.joinpath("companies_dictionary_nhs.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
     for row in spamreader:
@@ -644,10 +644,10 @@ with open(this_path.joinpath("drugs_dictionary_nhs.csv"), 'r', encoding="utf-8")
         name = row[1]
         synonyms = row[2].split("|")
 
-        add_drug(id, [name] + synonyms)
+        add_company(id, [name] + synonyms)
 
 
-with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
+with open(this_path.joinpath("companies_dictionary_wikipedia.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
     for row in spamreader:
@@ -658,9 +658,9 @@ with open(this_path.joinpath("drugs_dictionary_wikipedia.csv"), 'r', encoding="u
         name = row[1]
         synonyms = row[2].split("|")
 
-        add_drug(id, [name] + synonyms)
+        add_company(id, [name] + synonyms)
         
-with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
+with open(this_path.joinpath("companies_dictionary_mesh.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
     for row in spamreader:
@@ -670,9 +670,9 @@ with open(this_path.joinpath("drugs_dictionary_mesh.csv"), 'r', encoding="utf-8"
         id = row[0]
         name = row[1]
         synonyms = row[2].split("|")
-        add_drug(id, [name] + synonyms)
+        add_company(id, [name] + synonyms)
         
-with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
+with open(this_path.joinpath("companybank vocabulary.csv"), 'r', encoding="utf-8") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     headers = None
     for row in spamreader:
@@ -682,24 +682,24 @@ with open(this_path.joinpath("drugbank vocabulary.csv"), 'r', encoding="utf-8") 
         id = row[0]
         name = row[2]
         synonyms = row[5].split("|")
-        add_drug(id, [name] + synonyms)
+        add_company(id, [name] + synonyms)
         
 
 
-def find_drugs(tokens: list, is_ignore_case: bool = False):
-    drug_matches = []
+def find_companies(tokens: list, is_ignore_case: bool = False):
+    company_matches = []
     is_exclude = set()
 
     # Search for 2 token sequences
     for token_idx, token in enumerate(tokens[:-1]):
         cand = token + " " + tokens[token_idx + 1]
         if is_ignore_case:
-            match = drug_variant_to_canonical.get(cand.upper(), None)
+            match = company_variant_to_canonical.get(cand.upper(), None)
         else:
-            match = drug_variant_to_canonical.get(cand, None)
+            match = company_variant_to_canonical.get(cand, None)
         if match:
             for m in match:
-                drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx + 1))
+                company_matches.append((company_canonical_to_data[m], token_idx, token_idx + 1))
                 is_exclude.add(token_idx)
                 is_exclude.add(token_idx + 1)
 
@@ -707,11 +707,11 @@ def find_drugs(tokens: list, is_ignore_case: bool = False):
         if token_idx in is_exclude:
             continue
         if is_ignore_case:
-            match = drug_variant_to_canonical.get(token.upper(), None)
+            match = company_variant_to_canonical.get(token.upper(), None)
         else:
-            match = drug_variant_to_canonical.get(token, None)
+            match = company_variant_to_canonical.get(token, None)
         if match:
             for m in match:
-                drug_matches.append((drug_canonical_to_data[m], token_idx, token_idx))
+                company_matches.append((company_canonical_to_data[m], token_idx, token_idx))
 
-    return drug_matches
+    return company_matches
